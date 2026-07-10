@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huellitas de Esperanza</title>
+
+    <meta name="description"
+        content="Refugio de mascotas dedicado al rescate y adopción responsable de perros y gatos.">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONOS -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <!--================= HEADER =================-->
+
+    <header class="header">
+
+        <div class="contenedor">
+
+            <a href="#" class="logo">
+
+                <i class="fa-solid fa-paw"></i>
+
+                <span>Huellitas de Esperanza</span>
+
+            </a>
+
+            <nav>
+
+                <ul class="menu">
+
+                    <li><a href="#inicio">Inicio</a></li>
+
+                    <li><a href="#nosotros">Nosotros</a></li>
+
+                    <li><a href="#estadisticas">Impacto</a></li>
+
+                    <li><a href="#mascotas">Mascotas</a></li>
+
+                    <li><a href="#ayuda">Ayuda</a></li>
+
+                    <li><a href="#galeria">Galería</a></li>
+
+                    <li><a href="#contacto">Contacto</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!--================ HERO =================-->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-texto">
+
+            <h1>Cada huella merece un hogar.</h1>
+
+            <p>
+
+                Rescatamos perros y gatos en situación de abandono y les damos una
+                segunda oportunidad para encontrar una familia que los ame.
+
+            </p>
+
+            <div class="hero-botones">
+
+                <a href="#mascotas" class="btn">Adoptar ahora</a>
+
+                <a href="#contacto" class="btn-secundario">Contáctanos</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ NOSOTROS =================-->
+
+    <section id="nosotros" class="nosotros">
+
+        <div class="contenedor">
+
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+
+                Huellitas de Esperanza es un refugio dedicado al rescate,
+                recuperación y adopción responsable de perros y gatos.
+                Nuestro compromiso es brindarles atención veterinaria,
+                alimentación, cariño y la oportunidad de encontrar una familia.
+
+            </p>
+
+            <div class="mision-vision">
+
+                <div class="caja">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Misión</h3>
+
+                    <p>
+
+                        Rescatar animales abandonados y promover la adopción
+                        responsable mediante campañas de concienciación.
+
+                    </p>
+
+                </div>
+
+                <div class="caja">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <h3>Visión</h3>
+
+                    <p>
+
+                        Ser un referente nacional en protección animal y
+                        educación sobre el bienestar de las mascotas.
+
+                    </p>
+
+                </div>
+
+                <div class="caja">
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                    <h3>Valores</h3>
+
+                    <p>
+
+                        Amor, respeto, compromiso, empatía, solidaridad y
+                        responsabilidad.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ ESTADÍSTICAS =================-->
+
+    <section id="estadisticas" class="estadisticas">
+
+        <div class="contenedor">
+
+            <div class="numero">
+
+                <h2>350+</h2>
+
+                <p>Mascotas rescatadas</p>
+
+            </div>
+
+            <div class="numero">
+
+                <h2>275+</h2>
+
+                <p>Adopciones exitosas</p>
+
+            </div>
+
+            <div class="numero">
+
+                <h2>80+</h2>
+
+                <p>Voluntarios</p>
+
+            </div>
+
+            <div class="numero">
+
+                <h2>10</h2>
+
+                <p>Años ayudando</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ MASCOTAS =================-->
+
+    <!-- CONTINÚA EN LA PARTE 2 -->
+
+
+    <!--================ MASCOTAS =================-->
+
+    <section id="mascotas" class="mascotas">
+
+        <div class="contenedor">
+
+            <h2>Nuestras Mascotas</h2>
+
+            <p class="subtitulo">
+                Conoce a algunos de nuestros amigos que esperan encontrar un hogar.
+            </p>
+
+            <div class="busqueda">
+
+                <input type="text"
+                       id="buscarMascota"
+                       placeholder="Buscar mascota por nombre...">
+
+                <select id="filtroMascota">
+
+                    <option value="todos">Todas</option>
+
+                    <option value="perro">Perros</option>
+
+                    <option value="gato">Gatos</option>
+
+                </select>
+
+            </div>
+
+            <div class="contenedor-tarjetas">
+
+                <div class="tarjeta" data-tipo="perro">
+
+                    <img src="img/perro1.jpg" alt="Rocky">
+
+                    <h3>Rocky</h3>
+
+                    <p><strong>Edad:</strong> 2 años</p>
+
+                    <p>Juguetón, cariñoso y muy amigable con niños.</p>
+
+                    <button>Quiero adoptarlo</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="perro">
+
+                    <img src="img/perro2.jpg" alt="Max">
+
+                    <h3>Max</h3>
+
+                    <p><strong>Edad:</strong> 3 años</p>
+
+                    <p>Protector, obediente y le encanta correr.</p>
+
+                    <button>Quiero adoptarlo</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="perro">
+
+                    <img src="img/perro3.jpg" alt="Toby">
+
+                    <h3>Toby</h3>
+
+                    <p><strong>Edad:</strong> 1 año</p>
+
+                    <p>Muy activo y perfecto para familias.</p>
+
+                    <button>Quiero adoptarlo</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="perro">
+
+                    <img src="img/perro4.jpg" alt="Bruno">
+
+                    <h3>Bruno</h3>
+
+                    <p><strong>Edad:</strong> 5 años</p>
+
+                    <p>Tranquilo, noble y muy cariñoso.</p>
+
+                    <button>Quiero adoptarlo</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="gato">
+
+                    <img src="img/gato1.jpg" alt="Luna">
+
+                    <h3>Luna</h3>
+
+                    <p><strong>Edad:</strong> 1 año</p>
+
+                    <p>Dulce, tranquila y muy limpia.</p>
+
+                    <button>Quiero adoptarla</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="gato">
+
+                    <img src="img/gato2.jpg" alt="Milo">
+
+                    <h3>Milo</h3>
+
+                    <p><strong>Edad:</strong> 8 meses</p>
+
+                    <p>Curioso, juguetón y sociable.</p>
+
+                    <button>Quiero adoptarlo</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="gato">
+
+                    <img src="img/gato3.jpg" alt="Nala">
+
+                    <h3>Nala</h3>
+
+                    <p><strong>Edad:</strong> 2 años</p>
+
+                    <p>Cariñosa y le encanta dormir al sol.</p>
+
+                    <button>Quiero adoptarla</button>
+
+                </div>
+
+                <div class="tarjeta" data-tipo="gato">
+
+                    <img src="img/gato4.jpg" alt="Kiara">
+
+                    <h3>Kiara</h3>
+
+                    <p><strong>Edad:</strong> 4 años</p>
+
+                    <p>Muy tranquila y excelente compañera.</p>
+
+                    <button>Quiero adoptarla</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ CÓMO AYUDAR =================-->
+
+    <section id="ayuda" class="ayuda">
+
+        <div class="contenedor">
+
+            <h2>¿Cómo puedes ayudar?</h2>
+
+            <div class="ayuda-grid">
+
+                <div class="ayuda-card">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h3>Adopta</h3>
+
+                    <p>
+                        Dale una segunda oportunidad a una mascota y cambia su vida.
+                    </p>
+
+                </div>
+
+                <div class="ayuda-card">
+
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                    <h3>Dona</h3>
+
+                    <p>
+                        Tu aporte ayuda a cubrir alimentación, medicamentos y rescates.
+                    </p>
+
+                </div>
+
+                <div class="ayuda-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>Voluntariado</h3>
+
+                    <p>
+                        Dedica parte de tu tiempo para cuidar y acompañar a nuestras mascotas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ GALERÍA =================-->
+
+    <section id="galeria" class="galeria">
+
+        <div class="contenedor">
+
+            <h2>Galería</h2>
+
+            <div class="imagenes">
+
+                <img src="img/galeria1.jpg" alt="Galería 1">
+
+                <img src="img/galeria2.jpg" alt="Galería 2">
+
+                <img src="img/galeria3.jpg" alt="Galería 3">
+
+                <img src="img/galeria4.jpg" alt="Galería 4">
+
+                <img src="img/galeria5.jpg" alt="Galería 5">
+
+                <img src="img/galeria6.jpg" alt="Galería 6">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ TESTIMONIOS =================-->
+
+    <section class="testimonios">
+
+        <div class="contenedor">
+
+            <h2>Historias de adopción</h2>
+
+            <p class="subtitulo">
+                Estas son algunas experiencias de personas que decidieron darle un hogar a una mascota.
+            </p>
+
+            <div class="testimonios-grid">
+
+                <div class="testimonio">
+
+                    <p>
+                        "Adoptar a Rocky fue una de las mejores decisiones de nuestra familia.
+                        Es un compañero increíble."
+                    </p>
+
+                    <h4>María González</h4>
+
+                </div>
+
+                <div class="testimonio">
+
+                    <p>
+                        "Luna llegó a nuestra casa hace seis meses y ahora llena nuestros días
+                        de alegría."
+                    </p>
+
+                    <h4>Carlos Herrera</h4>
+
+                </div>
+
+                <div class="testimonio">
+
+                    <p>
+                        "Gracias al refugio encontramos a Milo. Todo el proceso fue muy sencillo."
+                    </p>
+
+                    <h4>Andrea López</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ PREGUNTAS FRECUENTES =================-->
+
+    <section class="faq">
+
+        <div class="contenedor">
+
+            <h2>Preguntas frecuentes</h2>
+
+            <div class="pregunta">
+
+                <h3>¿La adopción tiene algún costo?</h3>
+
+                <p>
+                    No. Solo solicitamos el compromiso de brindar una vida digna y responsable.
+                </p>
+
+            </div>
+
+            <div class="pregunta">
+
+                <h3>¿Puedo adoptar si vivo en un departamento?</h3>
+
+                <p>
+                    Sí. Lo importante es ofrecer espacio adecuado, cariño y cuidados.
+                </p>
+
+            </div>
+
+            <div class="pregunta">
+
+                <h3>¿Cómo puedo donar?</h3>
+
+                <p>
+                    Puedes colaborar con alimento, medicinas, accesorios o apoyo económico.
+                </p>
+
+            </div>
+
+            <div class="pregunta">
+
+                <h3>¿Aceptan voluntarios?</h3>
+
+                <p>
+                    Sí. Siempre necesitamos personas dispuestas a ayudar en distintas actividades.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ CONTACTO =================-->
+
+    <section id="contacto" class="contacto">
+
+        <div class="contenedor">
+
+            <h2>Contáctanos</h2>
+
+            <p class="subtitulo">
+                ¿Quieres adoptar o colaborar? Escríbenos.
+            </p>
+
+            <form id="formulario">
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre completo"
+                    required>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="Correo electrónico"
+                    required>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="Teléfono">
+
+                <textarea
+                    id="mensaje"
+                    rows="6"
+                    placeholder="Escribe tu mensaje..."
+                    required></textarea>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!--================ FOOTER =================-->
+
+    <footer>
+
+        <div class="contenedor-footer">
+
+            <div>
+
+                <h3>Huellitas de Esperanza</h3>
+
+                <p>
+                    Rescatando vidas y encontrando hogares desde 2016.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Contacto</h3>
+
+                <p>📍 Guayaquil - Ecuador</p>
+
+                <p>📞 (04) 123-4567</p>
+
+                <p>✉ contacto@huellitas.org</p>
+
+            </div>
+
+            <div>
+
+                <h3>Síguenos</h3>
+
+                <div class="redes">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 Huellitas de Esperanza | Todos los derechos reservados.
+
+        </p>
+
+    </footer>
+
+    <button id="btnArriba">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
