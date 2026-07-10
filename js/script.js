@@ -1,340 +1,108 @@
-/* =====================================
-   HUELLITAS DE ESPERANZA
-   JAVASCRIPT
-===================================== */
-
-
-/* =====================================
-   BUSCADOR Y FILTRO DE MASCOTAS
-===================================== */
-
-const buscarMascota = document.getElementById("buscarMascota");
-const filtroMascota = document.getElementById("filtroMascota");
-const tarjetas = document.querySelectorAll(".tarjeta");
-
-
-function filtrarMascotas(){
-
-    let texto = buscarMascota.value.toLowerCase();
-
-    let tipo = filtroMascota.value;
-
-
-    tarjetas.forEach(tarjeta => {
-
-
-        let nombre = tarjeta
-        .querySelector("h3")
-        .textContent
-        .toLowerCase();
-
-
-        let categoria = tarjeta.dataset.tipo;
-
-
-        let coincideNombre = nombre.includes(texto);
-
-
-        let coincideTipo =
-        tipo === "todos" || categoria === tipo;
-
-
-
-        if(coincideNombre && coincideTipo){
-
-            tarjeta.style.display="block";
-
-        }else{
-
-            tarjeta.style.display="none";
-
-        }
-
-
-    });
-
-
-}
-
-
-if(buscarMascota){
-
-    buscarMascota.addEventListener(
-        "keyup",
-        filtrarMascotas
-    );
-
-}
-
-
-if(filtroMascota){
-
-    filtroMascota.addEventListener(
-        "change",
-        filtrarMascotas
-    );
-
-}
-
-
-
-/* =====================================
-   BOTON VOLVER ARRIBA
-===================================== */
-
-
-const btnArriba = document.getElementById("btnArriba");
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-    if(window.scrollY > 300){
-
-        btnArriba.style.display="block";
-
-    }else{
-
-        btnArriba.style.display="none";
-
-    }
-
-
-});
-
-
-if(btnArriba){
-
-btnArriba.addEventListener(
-"click",
-()=>{
-
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-
-});
-
-}
-
-
-
-/* =====================================
-   VALIDACION DEL FORMULARIO
-===================================== */
-
-
-const formulario =
-document.getElementById("formulario");
-
-
-if(formulario){
-
-
-formulario.addEventListener(
-"submit",
-(e)=>{
-
-
-    e.preventDefault();
-
-
-
-    let nombre =
-    document.getElementById("nombre").value;
-
-
-    let correo =
-    document.getElementById("correo").value;
-
-
-    let mensaje =
-    document.getElementById("mensaje").value;
-
-
-
-    if(
-        nombre === "" ||
-        correo === "" ||
-        mensaje === ""
-    ){
-
-        alert(
-        "Por favor completa todos los campos obligatorios."
-        );
-
-        return;
-
-    }
-
-
-
-    alert(
-    "Gracias por contactarnos, pronto responderemos tu mensaje."
-    );
-
-
-    formulario.reset();
-
-
-
-});
-
-
-}
-
-
-
-/* =====================================
-   ANIMACION AL HACER SCROLL
-===================================== */
-
-
-const elementos =
-document.querySelectorAll(
-".caja, .tarjeta, .ayuda-card, .testimonio"
-);
-
-
-
-function mostrarElementos(){
-
-
-    elementos.forEach(elemento=>{
-
-
-        let posicion =
-        elemento.getBoundingClientRect()
-        .top;
-
-
-        let alturaPantalla =
-        window.innerHeight;
-
-
-        if(posicion < alturaPantalla - 100){
-
-
-            elemento.classList.add(
-                "mostrar"
-            );
-
-
-        }
-
-
-    });
-
-
-}
-
-
-window.addEventListener(
-"scroll",
-mostrarElementos
-);
-
-
-
-/* =====================================
-   MENU MOVIL
-===================================== */
-
-
-const menu =
-document.querySelector(".menu");
-
-
-const header =
-document.querySelector(".header");
-
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-    if(window.scrollY > 50){
-
-        header.style.background =
-        "#ffffff";
-
-    }else{
-
-        header.style.background =
-        "#ffffff";
-
-    }
-
-
-});
-
-
-
-/* =====================================
-   BOTONES DE ADOPCION
-===================================== */
-
-
-const botonesAdopcion =
-document.querySelectorAll(
-".tarjeta button"
-);
-
-
-
-botonesAdopcion.forEach(
-boton=>{
-
-
-    boton.addEventListener(
-    "click",
-    ()=>{
-
-
-        alert(
-        "Gracias por tu interés. Completa el formulario de contacto para iniciar el proceso de adopción."
-        );
-
-
-        document
-        .getElementById("contacto")
-        .scrollIntoView({
-
-            behavior:"smooth"
-
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. FILTRADO INTELIGENTE DE MASCOTAS ---
+    const buscarMascota = document.getElementById("buscarMascota");
+    const filtroMascota = document.getElementById("filtroMascota");
+    const tarjetasPet = document.querySelectorAll(".tarjeta-pet");
+
+    function filtrarCatalogo() {
+        const textoUsuario = buscarMascota.value.toLowerCase().trim();
+        const tipoSeleccionado = filtroMascota.value;
+
+        tarjetasPet.forEach(tarjeta => {
+            const nombreMascota = tarjeta.querySelector("h3").textContent.toLowerCase();
+            const categoriaMascota = tarjeta.dataset.tipo;
+
+            const coincideNombre = nombreMascota.includes(textoUsuario);
+            const coincideTipo = (tipoSeleccionado === "todos" || categoriaMascota === tipoSeleccionado);
+
+            if (coincideNombre && coincideTipo) {
+                tarjeta.style.display = "block";
+            } else {
+                tarjeta.style.display = "none";
+            }
         });
+    }
+
+    if (buscarMascota) buscarMascota.addEventListener("keyup", filtrarCatalogo);
+    if (filtroMascota) filtroMascota.addEventListener("change", filtrarCatalogo);
 
 
+    // --- 2. CONTROL DEL BOTÓN VOLVER ARRIBA ---
+    const btnArriba = document.getElementById("btnArriba");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            btnArriba.classList.add("active");
+        } else {
+            btnArriba.classList.remove("active");
+        }
+    });
+
+    if (btnArriba) {
+        btnArriba.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
+
+    // --- 3. VALIDACIÓN INTERACTIVA DEL FORMULARIO ---
+    const formulario = document.getElementById("formulario");
+
+    if (formulario) {
+        formulario.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+
+            if (nombre === "" || correo === "" || mensaje === "") {
+                alert("Por favor, completa todos los campos obligatorios para procesar tu solicitud.");
+                return;
+            }
+
+            alert(`¡Muchas gracias, ${nombre}! Hemos recibido tu mensaje. Un asesor del refugio se contactará contigo a la brevedad.`);
+            formulario.reset();
+        });
+    }
+
+
+    // --- 4. ACCIÓN DE LOS BOTONES DE ADOPCIÓN ---
+    const botonesAdopcion = document.querySelectorAll(".btn-adopcion");
+
+    botonesAdopcion.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const nombreMascota = e.target.closest(".tarjeta-info").querySelector("h3").firstChild.textContent.trim();
+            
+            alert(`¡Gracias por abrir tu corazón! Para iniciar la solicitud de adopción de ${nombreMascota}, por favor llena el formulario de contacto al final de la página.`);
+            
+            const seccionContacto = document.getElementById("contacto");
+            if (seccionContacto) {
+                seccionContacto.scrollIntoView({ behavior: "smooth" });
+            }
+        });
     });
 
 
-});
+    // --- 5. ANIMACIONES MODERNAS ON-SCROLL ---
+    const elementosAnimables = document.querySelectorAll(".animate-scroll");
 
+    function desencadenarAnimacion() {
+        const alturaDisparador = (window.innerHeight / 5) * 4.2;
 
+        elementosAnimables.forEach(elemento => {
+            const distanciaTop = elemento.getBoundingClientRect().top;
 
-/* =====================================
-   EFECTO DE CARGA
-===================================== */
+            if (distanciaTop < alturaDisparador) {
+                elemento.classList.add("active-view");
+            }
+        });
+    }
 
-
-window.addEventListener(
-"load",
-()=>{
-
-
-    document.body.classList.add(
-        "cargado"
-    );
-
-
+    window.addEventListener("scroll", desencadenarAnimacion);
+    desencadenarAnimacion(); // Ejecución inicial para capturar elementos arriba
 });
