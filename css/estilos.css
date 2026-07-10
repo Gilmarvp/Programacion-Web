@@ -1118,3 +1118,120 @@ footer hr{
     transform:translateY(0);
 
 }
+
+/* =====================================
+   RESPONSIVE CELULARES
+===================================== */
+
+@media(max-width:768px){
+
+    /* CONTENEDOR */
+    .contenedor{
+        width:95%;
+    }
+
+
+    /* HEADER */
+    .header .contenedor{
+        height:auto;
+        flex-direction:column;
+        padding:15px 0;
+    }
+
+
+    .logo{
+        font-size:22px;
+        margin-bottom:15px;
+    }
+
+
+    .menu{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+
+    /* HERO */
+    .hero{
+        height:auto;
+        min-height:100vh;
+        padding:120px 20px 50px;
+    }
+
+
+    .hero h1{
+        font-size:35px;
+    }
+
+
+    .hero p{
+        font-size:16px;
+    }
+
+
+    .btn,
+    .btn-secundario{
+        display:block;
+        width:90%;
+        margin:15px auto;
+    }
+
+
+    /* TITULOS */
+    section h2{
+        font-size:30px;
+    }
+
+
+    /* TARJETAS MASCOTAS */
+    .contenedor-tarjetas{
+        grid-template-columns:1fr;
+    }
+
+
+    .tarjeta img{
+        height:220px;
+    }
+
+
+    /* BUSCADOR */
+    .busqueda{
+        flex-direction:column;
+        align-items:center;
+    }
+
+
+    .busqueda input{
+        width:100%;
+    }
+
+
+    .busqueda select{
+        width:100%;
+    }
+
+
+    /* GALERIA */
+    .imagenes{
+        grid-template-columns:1fr;
+    }
+
+
+    .imagenes img{
+        height:220px;
+    }
+
+
+    /* FORMULARIO */
+    #formulario{
+        width:100%;
+    }
+
+
+    /* FOOTER */
+    footer{
+        padding:40px 5% 20px;
+    }
+
+}
